@@ -62,4 +62,8 @@ resource "aws_wafv2_web_acl" "cert-conv" {
 resource "aws_wafv2_web_acl_association" "waf_alb_association" {
   resource_arn = aws_lb.my_lb.arn
   web_acl_arn  = aws_wafv2_web_acl.cert-conv.arn
+
+  depends_on = [
+    aws_lb.aws_lb.my_lb,
+  ]
 }
