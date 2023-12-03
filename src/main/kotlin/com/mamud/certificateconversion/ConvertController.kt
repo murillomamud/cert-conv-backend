@@ -32,6 +32,11 @@ class ConvertController {
         return ResponseEntity("OK", HttpStatus.OK)
     }
 
+    @GetMapping("/")
+    fun getRoot() : ResponseEntity<String> {
+        return ResponseEntity("OK", HttpStatus.OK)
+    }
+
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(InvalidFileException::class)
     fun handleInvalidFileException(ex: InvalidFileException): String {
