@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 class CorsConfig : WebMvcConfigurer {
     override fun addCorsMappings(registry: CorsRegistry) {
         registry.addMapping("/convert")
-            .allowedOrigins("http://localhost:3000", "https://d3i7opoxsin9qq.cloudfront.net/")
+            .allowedOrigins("https://pfxtopem.mamud.cloud/")
             .allowedMethods("POST")
             .allowCredentials(true)
             .allowedHeaders("*")
