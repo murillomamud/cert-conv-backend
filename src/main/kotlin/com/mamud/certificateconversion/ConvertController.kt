@@ -27,6 +27,10 @@ class ConvertController {
         return ResponseEntity(certificate, headers, HttpStatus.OK)
     }
 
+    @GetMapping("/health")
+    fun getHealth() : ResponseEntity<String> {
+        return ResponseEntity("OK", HttpStatus.OK)
+    }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(InvalidFileException::class)
