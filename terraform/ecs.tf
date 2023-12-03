@@ -35,7 +35,7 @@ resource "aws_ecs_task_definition" "my_task_definition" {
         assignPublicIp = "ENABLED"
       }
       healthCheck = {
-        command = ["CMD-SHELL", "curl -f http://localhost:8080/ || exit 1"]
+        command = ["CMD-SHELL", "curl -f http://localhost:8080/health || exit 1"]
         interval = 300
         retries = 3
         startPeriod = 120
@@ -60,7 +60,7 @@ resource "aws_ecs_service" "my_service" {
 
   load_balancer {
     target_group_arn = aws_lb_target_group.my_target_group.arn
-    container_name   = "container-cert-conv-backend-api"
+    container_name   = "container-cert-conv-backend"
     container_port   = 8080
   }
 
