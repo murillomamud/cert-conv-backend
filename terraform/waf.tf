@@ -19,7 +19,6 @@ resource "aws_wafv2_web_acl" "cert-conv" {
       managed_rule_group_statement {
         name        = "AWSManagedRulesCommonRuleSet"
         vendor_name = "AWS"
-        version     = "1"
       }
     }
 
