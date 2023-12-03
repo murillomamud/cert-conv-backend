@@ -17,13 +17,18 @@ resource "aws_lb_target_group" "my_target_group" {
 
 resource "aws_lb_listener" "my_listener" {
   load_balancer_arn = aws_lb.my_lb.arn
-  port              = "80"
-  protocol          = "HTTP"
+  port              = "443"
+  protocol          = "HTTPS"
 
   default_action {
     type             = "forward"
     target_group_arn = aws_lb_target_group.my_target_group.arn
   }
+}
+
+resource "aws_lb_listener_certificate" "my_lb_listener_certificate" {
+  certificate_arn = var.cert_arn
+  listener_arn    = aws_lb_listener.my_listener.arn
 }
 
 output "load_balancer_dns_name" {
