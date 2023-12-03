@@ -1,4 +1,4 @@
-package com.mamud.certificateconvertion
+package com.mamud.certificateconversion
 
 import org.bouncycastle.openssl.jcajce.JcaPEMWriter
 import org.bouncycastle.util.io.pem.PemObject

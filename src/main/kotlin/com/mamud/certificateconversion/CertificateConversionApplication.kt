@@ -1,11 +1,11 @@
-package com.mamud.certificateconvertion
+package com.mamud.certificateconversion
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class CertificateConvertionApplication
+class CertificateConversionApplication
 
 fun main(args: Array<String>) {
-	runApplication<CertificateConvertionApplication>(*args)
+	runApplication<CertificateConversionApplication>(*args)
 }

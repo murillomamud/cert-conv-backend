@@ -1,10 +1,10 @@
-package com.mamud.certificateconvertion
+package com.mamud.certificateconversion
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class CertificateConvertionApplicationTests {
+class CertificateConversionApplicationTests {
 
 	@Test
 	fun contextLoads() {

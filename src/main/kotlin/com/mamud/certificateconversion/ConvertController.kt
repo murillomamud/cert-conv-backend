@@ -1,4 +1,4 @@
-package com.mamud.certificateconvertion
+package com.mamud.certificateconversion
 
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpStatus

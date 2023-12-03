@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.mamud.certificate-convertion' is invalid and this project uses 'com.mamud.certificateconvertion' instead.
+* The original package name 'com.mamud.certificate-convertion' is invalid and this project uses 'com.mamud.certificateconversion' instead.
 
 # Getting Started
 

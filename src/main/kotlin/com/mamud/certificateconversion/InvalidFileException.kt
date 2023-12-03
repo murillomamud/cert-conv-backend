@@ -1,4 +1,4 @@
-package com.mamud.certificateconvertion
+package com.mamud.certificateconversion
 
 import java.lang.RuntimeException
 
