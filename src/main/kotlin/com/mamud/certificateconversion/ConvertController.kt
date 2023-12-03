@@ -20,11 +20,15 @@ class ConvertController {
             throw InvalidFileException("Password is empty")
         }
 
-        val certificate = ConvertService().convertCertificate(file, password);
+        try {
+            val certificate = ConvertService().convertCertificate(file, password);
 
-        val headers = HttpHeaders()
-        headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=certificate.zip")
-        return ResponseEntity(certificate, headers, HttpStatus.OK)
+            val headers = HttpHeaders()
+            headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=certificate.zip")
+            return ResponseEntity(certificate, headers, HttpStatus.OK)
+        } catch (e: Exception) {
+            throw InvalidFileException("Error converting file")
+        }
     }
 
     @GetMapping("/health")
