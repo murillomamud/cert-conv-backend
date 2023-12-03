@@ -11,6 +11,8 @@ RUN mvn clean package
 # Estágio de execução
 FROM amazoncorretto:17-alpine-jdk
 
+RUN apk add --no-cache curl
+
 WORKDIR /app
 
 # Copia o JAR construído no estágio anterior para a imagem de execução
