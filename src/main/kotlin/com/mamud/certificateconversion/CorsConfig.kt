@@ -12,5 +12,11 @@ class CorsConfig : WebMvcConfigurer {
             .allowedMethods("POST")
             .allowCredentials(true)
             .allowedHeaders("*")
+
+        registry.addMapping("/")
+            .allowedOrigins("https://pfxtopem.mamud.cloud/")
+            .allowedMethods("GET")
+            .allowCredentials(true)
+            .allowedHeaders("*")
     }
 }
